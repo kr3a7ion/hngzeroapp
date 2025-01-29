@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:io';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,20 +19,16 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
-  final String githubRepoLink = "https://github.com/kr3a7ion/hngzerorepo.git";
+  HomeScreen({super.key});
 
-  const HomeScreen({super.key});
-
-  void openURL(String url) {
-    Process.run('xdg-open', [url]);
-    Process.run('open', [url]);
-  }
+  final Uri theUrl = Uri.parse("https://github.com/kr3a7ion/hngzeroapp.git");
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        centerTitle: true,
         title: Text('Project Zero',
             style: TextStyle(
                 fontSize: 18,
@@ -44,7 +40,9 @@ class HomeScreen extends StatelessWidget {
         child: ElevatedButton(
           style:
               ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.teal)),
-          onPressed: () => openURL(githubRepoLink),
+          onPressed: () {
+            launchUrl(theUrl, mode: LaunchMode.platformDefault);
+          },
           child: Text(
             'Open Gitrepo link',
             style: TextStyle(fontSize: 18, color: Colors.white),

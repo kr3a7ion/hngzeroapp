@@ -1,16 +1,12 @@
 # hngzeroapp
 
-A new Flutter project.
+# Mobile App with GitHub & HNG Backlinks
 
-## Getting Started
+This is a simple mobile app built with **Flutter** that provides quick access to a **GitHub repository**. The app features buttons that open these links in the device's default web browser.
 
-This project is a starting point for a Flutter application.
+## Features
+- ✅ Opens a GitHub repository in a web browser or any default app.
+- ✅ Opens HNG Hire Pages for hiring Flutter, React Native, and mobile developers.
+- ✅ Simple, clean UI with Flutter's **ElevatedButton** for navigation.
+- ✅ Compatible with Android
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
